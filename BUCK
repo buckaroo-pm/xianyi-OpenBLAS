@@ -21,7 +21,6 @@ genrule(
   cmd = ' && '.join([
     'mkdir -p $OUT',
     'cd $SRCDIR',
-    # './configure',
     'make',
     'make install PREFIX=$OUT',
   ]),
@@ -41,32 +40,3 @@ prebuilt_cxx_library(
     'PUBLIC',
   ],
 )
-
-# cxx_binary(
-#   name = 'gen-config-h',
-#   srcs = [
-#     'gen_config_h.c',
-#   ],
-# )
-
-# linux_srcs = [
-#   'cpuid_x86.c',
-# ]
-
-# cxx_library(
-#   name = 'openblas',
-#   header_namespace = '',
-#   exported_headers = subdir_glob([
-#     ('', '*.h'),
-#   ]),
-#   srcs = [
-
-#   ],
-#   platform_srcs = [
-#     ('linux*', linux_srcs),
-#   ],
-#   deps = buckaroo_deps(),
-#   visibility = [
-#     'PUBLIC',
-#   ],
-# )
