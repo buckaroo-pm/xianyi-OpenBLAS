@@ -1,4 +1,5 @@
-#include "../cblas.h"
+// #include "../cblas.h"
+#include <cblas.h>
 
 int main() {
 	int th_model = openblas_get_parallel();

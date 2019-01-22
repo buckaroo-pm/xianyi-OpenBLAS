@@ -1,0 +1,9 @@
+cxx_binary(
+  name = 'test',
+  srcs = [
+    'get_threading_model.c',
+  ],
+  deps = [
+    '//:openblas',
+  ],
+)
